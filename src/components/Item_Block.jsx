@@ -25,6 +25,7 @@ function Item_Block({
             });
             setKey("");
             setValues("");
+            setExpandChild(true);
         }
     }
 
