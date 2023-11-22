@@ -71,19 +71,22 @@ function Item_Block({
                     </thead>
 
                     <tbody>
-                        {Object.keys(itemChild).map(
-                            (key) => (
-                                <Child_Block
-                                    key={`${itemName}-item-${key}`}
-                                    parentName={itemName}
-                                    itemName={key}
-                                    itemData={
-                                        itemChild[key]
-                                    }
-                                    delChild={delChild}
-                                />
-                            )
-                        )}
+                        {!!itemChild &&
+                            Object.keys(itemChild).map(
+                                (key) => (
+                                    <Child_Block
+                                        key={`${itemName}-item-${key}`}
+                                        parentName={
+                                            itemName
+                                        }
+                                        itemName={key}
+                                        itemData={
+                                            itemChild[key]
+                                        }
+                                        delChild={delChild}
+                                    />
+                                )
+                            )}
                     </tbody>
                 </table>
 
